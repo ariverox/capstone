@@ -2,6 +2,7 @@
 <span ng-show="user" class="ng-binding">  Welcome, {{user.username}}!</span>
 <span ng-show="user.packs > 0">You have {{user.packs}} packs waiting to be opened</span>
 <button ng-show="user" class="btn btn-success pull-right" ng-click="logout()">Logout</button>
-<button ui-sref="home" class="btn btn-success pull-right">Home</button>
-<button ng-show="!user" ui-sref="login" class="btn btn-success pull-right">Login</button>
+<button ui-sref="home" class="btn btn-success pull-left">Home</button>
+<button ui-sref="gameCreate" class= "btn btn-success pull-right">Other</button>
 
+<button ng-show="!user" ui-sref="login" class="btn btn-success pull-right">Login</button>

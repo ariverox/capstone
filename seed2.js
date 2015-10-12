@@ -241,15 +241,21 @@ function seedHeal() {
 
 
 function seedGames() {
+  var users =[]
+  tempData.users.forEach(function(user){
+    users.push({
+      id:user._id, isAdmin: false
+    })
+  })
   var games = [{
-    name: 'Startup',
+    name: 'Windfury',
     cards: tempData.cards.map(function(card) {
       return card._id;
     }),
     decks: tempData.decks.map(function(deck) {
       return deck._id;
     }),
-    creators: [tempData.users[0]._id]
+    users: users
   }];
 
   return Game.createAsync(games);

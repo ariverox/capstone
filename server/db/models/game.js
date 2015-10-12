@@ -5,7 +5,16 @@ var ObjectId = mongoose.Schema.Types.ObjectId;
 var schema = new mongoose.Schema({
   name: {type: String, required: true, unique: true},
   cards: [{type: ObjectId, ref: 'Card'}],
-  admins: [{type: ObjectId, ref: 'User'}]
+  users:[
+    { id :{
+      type:ObjectId,
+      ref: 'User'
+    } ,
+    isAdmin:{
+      type:Boolean,
+      default: false
+    }
+  }],
 });
 
 mongoose.model('Game', schema);

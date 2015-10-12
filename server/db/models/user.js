@@ -66,8 +66,6 @@ var schema = new mongoose.Schema({
     min: 0
   },
 
-
-
   stardust: {
     type: Number,
     default: 0,

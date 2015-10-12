@@ -1,0 +1,24 @@
+<section id="createCardGame">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 text-center">
+        <h2> What is up {{test}} </h2>
+        <form name="gameForm" ng-submit="signupForm.$valid && createGame()">
+          <label style='font-size:25px'> Enter a name for your Game</label>
+          <div>
+            <input ng-model='newGame.name' />
+          </div>
+          <label style='font-size:25px'> upload or link the url of your logo</label>
+          <div>
+            <input ng-model='newGame.logo'/>
+          </div>
+          <label style='font-size:25px'> </label>
+          <div>
+            <input ng-model='newGame.admin' />
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>
